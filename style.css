@@ -35,7 +35,7 @@ body {
 .top {
     width: 100%;
     letter-spacing: 1px;
-    background: rgb(23, 255, 243);
+    background: rgb(101, 137, 168);
     height: 100px;
     position: relative;
     top: 40px;
@@ -43,7 +43,7 @@ body {
     font-size: 10px;
     text-align: center;
     align-content: center;
-    color: rgb(113, 62, 252);
+    color: rgb(0, 0, 0);
 }
 
 .line {
