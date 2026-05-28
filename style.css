@@ -8,6 +8,8 @@ body {
     background: white;
     padding: 40px 15px;
     display: flex;
+    flex-direction: column; /* Allows button to sit below the resume card */
+    align-items: center;    /* Keeps everything centered */
     justify-content: center;
 }
 
@@ -33,9 +35,9 @@ body {
 }
 
 .top {
-    width: 100%;
+    width: 102%;
     letter-spacing: 1px;
-    background: rgb(101, 137, 168);
+    background: rgb(23, 255, 243);
     height: 100px;
     position: relative;
     top: 40px;
@@ -43,7 +45,7 @@ body {
     font-size: 10px;
     text-align: center;
     align-content: center;
-    color: #ffff;
+    color: rgb(113, 62, 252);
 }
 
 .line {
@@ -57,9 +59,9 @@ body {
     position: relative;
     top: 50px;
     font-size: 8px;
-    padding: 10px;
+    padding: 15px;
     margin: 0;
-    line-height: 18px;
+    line-height: 20px;
 }
 .text h1{
     letter-spacing: 2px;
@@ -67,7 +69,7 @@ body {
 .text p,
 span,
 li {
-    font-size: 12px;
+    font-size: 13px;
     color: aliceblue;
     padding: 5px;
 }
@@ -178,4 +180,64 @@ tbody tr:nth-child(even) {
 
 .de {
     color: #0f172a;
+}
+
+
+/* ==========================================================================
+   BOTTOM DOWNLOAD BUTTON & PRINT CONFIGURATION
+   ========================================================================== */
+
+/* Button Style - Sitting at the bottom of the web page */
+.download-btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #1e40af;
+}
+
+/* Strict Single-Page PDF configuration styles */
+@media print {
+    @page {
+        size: A4;
+        margin: 0 !important; 
+    }
+
+    .download-btn {
+        display: none !important; /* Hides the button entirely in the PDF */
+    }
+
+    body, html {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        overflow: hidden !important;
+    }
+
+    .page {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        overflow: hidden !important;
+    }
 }
