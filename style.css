@@ -182,7 +182,12 @@ tbody tr:nth-child(even) {
     color: #0f172a;
 }
 
-
+e_sin {
+            position: absolute;
+            top: 90%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+        }
 /* ==========================================================================
    BOTTOM DOWNLOAD BUTTON & ONE-PAGE PRINT OVERRIDES
    ========================================================================== */
